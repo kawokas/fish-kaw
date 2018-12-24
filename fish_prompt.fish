@@ -1,4 +1,4 @@
-function fish_right_prompt
+function fish_prompt
     set -l status_copy $status
     set -l status_code $status_copy
 

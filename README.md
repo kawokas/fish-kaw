@@ -1,10 +1,14 @@
 # Kaw
-kawoka's fish shell theme
+kawoka's custom fish shell theme (sol based)
+[]
 
 ## Install
 
 With fisherman
 
 ```fish
-fisher kawoka/fish-kaw
+fisher add kawoka/fish-kaw
 ```
+
+## Terminal Settings
+import `assets/Kaw.terminal`

@@ -1,4 +1,5 @@
 # Kaw
+kawoka's fish shell theme
 
 ## Install
 

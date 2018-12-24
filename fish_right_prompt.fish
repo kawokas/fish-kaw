@@ -4,8 +4,8 @@ function fish_right_prompt
     set -l dir
     set -l base
 
-    set -l color (set_color white)
-    set -l color2 (set_color normal)
+    set -l color (set_color $kaw_color_normal)
+    set -l color2 (set_color $kaw_color_normal)
 
     set -l color_error (set_color $fish_color_error)
     set -l color_normal (set_color $fish_color_normal)
@@ -32,7 +32,7 @@ function fish_right_prompt
     end
 
     if test "$PWD" = ~
-        set base (set_color cyan)"~"
+        set base (set_color $kaw_color_green)"~"
 
     else if pwd_is_home
         set dir
@@ -63,7 +63,7 @@ function fish_right_prompt
         set -l git_glyph "╍"
 
         if git_is_staged
-            set git_color (set_color green)
+            set git_color (set_color $kaw_color_green)
 
             if git_is_dirty
                 set git_glyph "$git_color$git_glyph$color_error$git_glyph"
@@ -76,7 +76,7 @@ function fish_right_prompt
         else if git_is_touched
             set git_color "$color_error"
         else
-            set git_color (set_color cyan)
+            set git_color (set_color $kaw_color_green)
         end
 
         set -l git_ahead (git_ahead "+" "-" "+-")

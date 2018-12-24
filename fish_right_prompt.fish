@@ -95,7 +95,7 @@ function fish_right_prompt
                 set right_par "}"
             end
 
-            echo $branch_name | awk '{len=split($0,arr,"/"); print arr[len]}' | set branch_name
+            echo $branch_name | awk '{len=split($0,arr,"/"); print arr[len]}'
             set branch_name " $git_color$left_par$color2$branch_name$git_color$right_par"
         end
 

@@ -6,5 +6,5 @@ function fish_prompt
     set -l color_error (set_color $fish_color_error)
     set -l color "$color_normal"
 
-    echo -sn ">"
+    echo -sn "> "
 end

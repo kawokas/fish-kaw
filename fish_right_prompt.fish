@@ -7,7 +7,7 @@ function fish_right_prompt
     set -l dir
     set -l base
 
-    set -l color (set_color $kaw_color_gray)
+    set -l color (set_color $kaw_color_normal)
     set -l color2 (set_color $kaw_color_gray)
 
     set -l color_error (set_color $fish_color_error)
@@ -55,14 +55,14 @@ function fish_right_prompt
         set dir "$dir$pwd_info[2]/"
     end
 
-    echo -sn "$color2$dir$color$base$color_normal"
+    echo -sn "$color2$dir$color2$base$color_normal"
 
     if test ! -z "$pwd_info[3]"
         echo -sn "$color/$pwd_info[3]"
     end
 
     if set branch_name (git_branch_name)
-        set -l git_color "%color_normal"
+        set -l git_color "$color_normal"
         set -l git_glyph "╍"
 
         if git_is_staged
@@ -112,7 +112,7 @@ function fish_right_prompt
                 print name
               }'
             set branch_name (echo $branch_name | awk $branch_name_awk)
-            set branch_name " $git_color$left_par$color2$branch_name$git_color$right_par"
+            set branch_name " $git_color$left_par$color$branch_name$git_color$right_par"
         end
 
         echo -sn " $git_color$git_glyph$branch_name$git_ahead"

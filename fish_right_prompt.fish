@@ -1,4 +1,4 @@
-# by sol
+# sol: https://github.com/jorgebucaran/fish-sol
 # Copyright (c) 2016 Jorge Bucaran
 
 function fish_right_prompt

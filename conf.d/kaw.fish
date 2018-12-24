@@ -2,7 +2,7 @@
 set -g kaw_color_red 'A00E0E'
 set -g kaw_color_orange 'CC6612'
 set -g kaw_color_yellow 'EAB624'
-set -g kaw_color_green '14B267'
+set -g kaw_color_green '20A874'
 set -g kaw_color_blue '23819B'
 set -g kaw_color_normal 'A3A3A3'
 

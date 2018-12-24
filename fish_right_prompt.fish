@@ -1,3 +1,6 @@
+# by sol
+# Copyright (c) 2016 Jorge Bucaran
+
 function fish_right_prompt
     set -l status_copy $status
     set -l pwd_info (pwd_info "/")

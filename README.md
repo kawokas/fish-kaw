@@ -1,7 +1,8 @@
 # Kaw
 kawoka's simple fish shell theme (sol based)
+
 ---
-<img src="https://raw.githubusercontent.com/kawoka/fish-kaw/master/assets/screenshot.png" />
+<img style="max-width: 100%; width: 500px;" src="https://raw.githubusercontent.com/kawoka/fish-kaw/master/assets/screenshot.png" />
 
 ## Install
 

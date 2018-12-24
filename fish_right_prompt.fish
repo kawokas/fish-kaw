@@ -95,7 +95,25 @@ function fish_right_prompt
                 set right_par "}"
             end
 
-            echo $branch_name # | awk '{len=split($0,arr,"/"); print arr[len]}' | set branch_name
+            set branch_name_awk '{
+                len=split($0, arr, "/");
+                name="";
+                for(i=1; i<=len; ++i) {
+                  if (i == len) {
+                    dirname = arr[i]
+                  } else {
+                    match(arr[i], /^./);
+                    dirname = substr(arr[i], RSTART, RLENGTH)
+                  }
+                  if(name == "") {
+                    name = dirname
+                  }else {
+                    name = sprintf("%s/%s",name,dirname);
+                  }
+                }
+                print name
+              }'
+            set branch_name (echo $branch_name | awk $branch_name_awk)
             set branch_name " $git_color$left_par$color2$branch_name$git_color$right_par"
         end
 

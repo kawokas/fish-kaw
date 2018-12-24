@@ -1,5 +1,6 @@
 # Kaw
-kawoka's custom fish shell theme (sol based)
+kawoka's simple fish shell theme (sol based)
+---
 <img src="https://raw.githubusercontent.com/kawoka/fish-kaw/master/assets/screenshot.png" />
 
 ## Install

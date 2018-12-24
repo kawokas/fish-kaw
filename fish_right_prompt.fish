@@ -62,7 +62,7 @@ function fish_right_prompt
     end
 
     if set branch_name (git_branch_name)
-        set -l git_color
+        set -l git_color "%color_normal"
         set -l git_glyph "╍"
 
         if git_is_staged
@@ -92,11 +92,6 @@ function fish_right_prompt
         else
             set -l left_par "("
             set -l right_par ")"
-
-            if git_is_stashed
-                set left_par "{"
-                set right_par "}"
-            end
 
             set branch_name_awk '{
                 len=split($0, arr, "/");

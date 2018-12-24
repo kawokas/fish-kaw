@@ -7,11 +7,11 @@ function fish_right_prompt
     set -l dir
     set -l base
 
-    set -l color (set_color $kaw_color_normal)
-    set -l color2 (set_color $kaw_color_normal)
+    set -l color (set_color $kaw_color_gray)
+    set -l color2 (set_color $kaw_color_gray)
 
     set -l color_error (set_color $fish_color_error)
-    set -l color_normal (set_color $fish_color_normal)
+    set -l color_normal (set_color $fish_color_gray)
 
     echo -sn " "
 

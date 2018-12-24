@@ -5,6 +5,7 @@ set -g kaw_color_yellow 'EAB624'
 set -g kaw_color_green '20A874'
 set -g kaw_color_blue '23819B'
 set -g kaw_color_normal 'A3A3A3'
+set -g kaw_prompt_arrow '❯' #❯›⌁⁍
 
 set -g fish_color_normal $kaw_color_normal # the default color
 set -g fish_color_command $kaw_color_green # the color for commands

@@ -35,7 +35,7 @@ function fish_right_prompt
     end
 
     if test "$PWD" = ~
-        set base (set_color $kaw_color_green)"~"
+        set base (set_color $kaw_color_dark_green)"~"
 
     else if pwd_is_home
         set dir
@@ -66,7 +66,7 @@ function fish_right_prompt
         set -l git_glyph "╍"
 
         if git_is_staged
-            set git_color (set_color $kaw_color_green)
+            set git_color (set_color $kaw_color_dark_green)
 
             if git_is_dirty
                 set git_glyph "$git_color$git_glyph$color_error$git_glyph"
@@ -79,7 +79,7 @@ function fish_right_prompt
         else if git_is_touched
             set git_color "$color_error"
         else
-            set git_color (set_color $kaw_color_green)
+            set git_color (set_color $kaw_color_dark_green)
         end
 
         set -l git_ahead (git_ahead "+" "-" "+-")

@@ -1,8 +1,9 @@
 # see: https://fishshell.com/docs/current/index.html#variables-color
-set -g kaw_color_red 'A00E0E'
+set -g kaw_color_red '900E0E'
 set -g kaw_color_orange 'CC6612'
 set -g kaw_color_yellow 'EAB624'
-set -g kaw_color_green '20A874'
+set -g kaw_color_green '20B874'
+set -g kaw_color_dark_green '0f7f32'
 set -g kaw_color_blue '23819B'
 set -g kaw_color_normal 'A3A3A3'
 set -g kaw_color_gray '1F1F1F'

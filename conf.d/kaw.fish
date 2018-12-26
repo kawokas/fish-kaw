@@ -6,7 +6,7 @@ set -g kaw_color_green '20B874'
 set -g kaw_color_dark_green '0f7f32'
 set -g kaw_color_blue '23819B'
 set -g kaw_color_normal 'A3A3A3'
-set -g kaw_color_gray '333333'
+set -g kaw_color_gray '383838'
 
 set -g kaw_prompt_arrow '❯' #❯›⌁⁍
 

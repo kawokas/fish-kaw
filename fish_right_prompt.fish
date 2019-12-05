@@ -119,5 +119,5 @@ function fish_right_prompt
     end
 
     echo -sn "$color_normal "
-    echo -sn (date "+%h:%M")
+    echo -sn ( date "+%H:%M" )
 end

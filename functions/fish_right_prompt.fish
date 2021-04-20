@@ -82,7 +82,7 @@ function fish_right_prompt
             set git_color (set_color $kaw_color_dark_green)
         end
 
-        set -l _kaw__git_ahead (git_ahead "+" "-" "+-")
+        set -l git_ahead (_kaw__git_ahead "+" "-" "+-")
 
         if test "$branch_name" = "master" -o "$branch_name" = "main"
             set branch_name

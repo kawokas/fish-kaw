@@ -88,7 +88,7 @@ function _kaw__git_is_detached_head -d "Test if the repository is in a detached 
         return 1
     end
 
-    git_is_repo
+    _kaw__git_is_repo
 end
 
 function _kaw__git_is_dirty -d "Test if there are changes not staged for commit"
@@ -96,7 +96,7 @@ function _kaw__git_is_dirty -d "Test if there are changes not staged for commit"
         return 1
     end
 
-    git_is_repo
+    _kaw__git_is_repo
 end
 
 function _kaw__git_is_empty -d "Test if a repository is empty"
@@ -104,7 +104,7 @@ function _kaw__git_is_empty -d "Test if a repository is empty"
         return 1
     end
 
-     git_is_repo
+     _kaw__git_is_repo
 end
 
 function _kaw__git_is_repo -d "Test if the current directory is a Git repository"
@@ -118,7 +118,7 @@ function _kaw__git_is_staged -d "Test if there are changes staged for commit"
         return 1
     end
 
-    git_is_repo
+    _kaw__git_is_repo
 end
 
 function _kaw__git_is_stashed -d "Test if there are changes in the Git stash"
@@ -135,7 +135,7 @@ function _kaw__git_is_tag -d "Test if HEAD is on top of a tag (can be simple, an
 end
 
 function _kaw__git_is_touched -d "Test if there are any changes in the working tree"
-    if not git_is_repo
+    if not _kaw__git_is_repo
         return 1
     end
 
@@ -152,7 +152,7 @@ function _kaw__git_is_touched -d "Test if there are any changes in the working t
 end
 
 function _kaw__git_repository_root -d "Get the top level directory of the current git repository"
-    if not git_is_repo
+    if not _kaw__git_is_repo
         return 1
     end
 
@@ -160,7 +160,7 @@ function _kaw__git_repository_root -d "Get the top level directory of the curren
 end
 
 function _kaw__git_untracked_files -d "Get the number of untracked files in a repository"
-    if not git_is_repo
+    if not _kaw__git_is_repo
         return 1
     end
 

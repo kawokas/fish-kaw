@@ -3,7 +3,7 @@
 
 function fish_right_prompt
     set -l status_copy $status
-    set -l pwd_info (pwd_info "/")
+    set -l pwd_info (_kaw__pwd_info "/")
     set -l dir
     set -l base
 
@@ -31,13 +31,13 @@ function fish_right_prompt
             set color "$color_error"
         end
 
-        echo -sn "$color"(host_info "usr@")"$color_normal"
+        echo -sn "$color"(_kaw__host_info "usr@")"$color_normal"
     end
 
     if test "$PWD" = ~
         set base (set_color $kaw_color_dark_green)"~"
 
-    else if pwd_is_home
+    else if _kaw__pwd_is_home
         set dir
     else
         if test "$PWD" != /
@@ -61,32 +61,32 @@ function fish_right_prompt
         echo -sn "$color/$pwd_info[3]"
     end
 
-    if set branch_name (git_branch_name)
+    if set branch_name (_kaw__git_branch_name)
         set -l git_color "$color_normal"
         set -l git_glyph "╍"
 
-        if git_is_staged
+        if _kaw__git_is_staged
             set git_color (set_color $kaw_color_dark_green)
 
-            if git_is_dirty
+            if _kaw__git_is_dirty
                 set git_glyph "$git_color$git_glyph$color_error$git_glyph"
                 set git_color "$color_error"
             end
 
-        else if git_is_dirty
+        else if _kaw__git_is_dirty
             set git_color "$color_error"
 
-        else if git_is_touched
+        else if _kaw__git_is_touched
             set git_color "$color_error"
         else
             set git_color (set_color $kaw_color_dark_green)
         end
 
-        set -l git_ahead (git_ahead "+" "-" "+-")
+        set -l _kaw__git_ahead (git_ahead "+" "-" "+-")
 
         if test "$branch_name" = "master" -o "$branch_name" = "main"
             set branch_name
-            if git_is_stashed
+            if _kaw__git_is_stashed
                 set branch_name "{}"
             end
         else

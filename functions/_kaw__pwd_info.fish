@@ -1,6 +1,6 @@
 function _kaw__pwd_info -a separator -d "Print info about the current working directory"
     set -l home ~
-    set -l git_root (command git rev-parse --show-toplevel >2 /dev/null)
+    set -l git_root (command git rev-parse --show-toplevel 2> /dev/null)
 
     echo "$PWD" | awk -v home="$home" -v git_root="$git_root" -v separator="$separator" '
         function base(string) {

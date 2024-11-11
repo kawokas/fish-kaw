@@ -3,7 +3,7 @@ function _kaw__git_is_touched -d "Test if there are any changes in the working t
         return 1
     end
 
-    command git status --porcelain ^ /dev/null | command awk '
+    command git status --porcelain 2> /dev/null | command awk '
         // {
             z++
             exit 0
